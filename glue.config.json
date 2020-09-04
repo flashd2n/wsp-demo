@@ -1,0 +1,31 @@
+{
+    "glue": {
+        "layouts": {
+            "autoRestore": false,
+            "autoSaveWindowContext": false
+        },
+        "channels": false,
+        "appManager": false,
+        "assets": {
+            "location": "/glue"
+        }
+    },
+    "gateway": {},
+    "appManager": {
+        "remoteSources": [
+            {
+                "url": "http://localhost:4224/api/glue-apps",
+                "pollingInterval": 2000
+            }
+        ],
+        "localApplications": [
+            {
+                "name": "appC",
+                "details": {
+                    "url": "/app-c/index.html"
+                }
+            }
+        ]
+    },
+    "channels": []
+}

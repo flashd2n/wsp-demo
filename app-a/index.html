@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/lib/web.umd.js"></script>
+    <script src="/lib/workspaces.umd.js"></script>
+
+</head>
+
+<body style="background-color: darkkhaki">
+    <h1>App A</h1>
+
+    <script>
+        window.GlueWeb({ libraries: [GlueWorkspaces], appManager: true, application: 'appA' })
+            .then((glue) => {
+                window.glue = glue;
+                console.log("glue ready");
+            })
+            .catch(console.log);
+    </script>
+</body>
+
+</html>

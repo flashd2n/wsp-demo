@@ -1,0 +1,56 @@
+{
+    "glueAssets": {
+        "worker": "./node_modules/@glue42/worker-web/dist/worker.js",
+        "gateway": {
+            "location": "./node_modules/@glue42/gateway-web/web/gateway-web.js"
+        },
+        "config": "./glue.config.json",
+        "route": "/glue",
+        "layouts": "./glue.layouts.json",
+        "workspaces": {
+            "appLocation": "./node_modules/@glue42/workspaces-app",
+            "manifestLocation": "./workspaces.webmanifest",
+            "frameCss": "./frame.css",
+            "popupsCss": "./custom-popups.css"
+        }
+    },
+    "server": {
+        "apps": [
+            {
+                "route": "/",
+                "file": {
+                    "path": "./main/"
+                }
+            },
+            {
+                "route": "/app-a",
+                "file": {
+                    "path": "./app-a/"
+                }
+            },
+            {
+                "route": "/app-b",
+                "file": {
+                    "path": "./app-b/"
+                }
+            },
+            {
+                "route": "/app-c",
+                "file": {
+                    "path": "./app-c/"
+                }
+            }
+        ],
+        "settings": {
+            "port": 4242,
+            "disableCache": true
+        },
+        "sharedAssets": [
+            {
+                "route": "/lib",
+                "path": "./lib"
+            }
+        ]
+    },
+    "logging": "default"
+}
