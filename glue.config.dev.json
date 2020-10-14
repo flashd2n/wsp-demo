@@ -9,9 +9,7 @@
         "layouts": "./glue.layouts.json",
         "workspaces": {
             "appLocation": "./node_modules/@glue42/workspaces-app",
-            "manifestLocation": "./workspaces.webmanifest",
-            "frameCss": "./frame.css",
-            "popupsCss": "./custom-popups.css"
+            "manifestLocation": "./workspaces.webmanifest"
         }
     },
     "server": {
@@ -47,8 +45,12 @@
         },
         "sharedAssets": [
             {
-                "route": "/lib",
-                "path": "./lib"
+                "route": "/lib/web.umd.js",
+                "path": "./node_modules/@glue42/web/dist/web.umd.js"
+            },
+            {
+                "route": "/lib/workspaces.umd.js",
+                "path": "./node_modules/@glue42/workspaces-api/dist/workspaces.umd.js"
             }
         ]
     },
